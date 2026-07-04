@@ -1,0 +1,26 @@
+{
+  "name": "line-reservation-relay",
+  "version": "0.1.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "4.105.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "LINE_CHANNEL_SECRET": {
+        "description": "LINE Developersの「Channel secret」を貼り付けてください。"
+      },
+      "GAS_WEBHOOK_URL": {
+        "description": "スプレッドシートの案内に従って発行した、/execで終わるGoogle受付URLを貼り付けてください。"
+      },
+      "RELAY_SHARED_SECRET": {
+        "description": "スプレッドシートの「③ LINEトークンと接続情報」に表示された合言葉を貼り付けてください。"
+      }
+    }
+  }
+}
