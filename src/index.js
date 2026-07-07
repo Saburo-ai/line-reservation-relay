@@ -1,5 +1,5 @@
 const MAX_BODY_BYTES = 512 * 1024;
-const VERSION = "0.1.1";
+const VERSION = "0.1.0";
 
 export default {
   async fetch(request, env) {
